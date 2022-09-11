@@ -189,7 +189,7 @@ def reco_result(request):
         for (root, directories, files) in os.walk(ENROLLED_DATA):
             for file in files:
                 file_path = os.path.join(root, file)
-                model = torch.hub.load('ultralytics/yolov5', 'custom', path='mainapp/yolov5/best_clo.pt')
+                model = torch.hub.load('ultralytics/yolov5', 'custom', path='mainapp/best_clo.pt')
                 result = model(file_path)
                 print(result)
                 names = list(result.pandas().xyxy[0]['name'])
