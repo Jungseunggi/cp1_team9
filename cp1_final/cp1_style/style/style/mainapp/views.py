@@ -5,6 +5,9 @@ import joblib
 import requests
 from bs4 import BeautifulSoup as bs
 import torch
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def change(li):
     result = []
@@ -120,14 +123,14 @@ def size_to(size):
         size="3XL"
     return size
             
-model = joblib.load('/Users/shlee/Desktop/cp1_final/cp1_style/style/style/mainapp/knn_one.pkl')
+model = joblib.load('mainapp/knn_one.pkl')
 
 #아래 정보를 입력
-user = 'fuusaujh'
-password = 'KPbDgG1NtOXKVcU_rstsh0xMTFDChg0J'
-host_product = 'jelani.db.elephantsql.com'
-dbname = '	fuusaujh'
-port='5432'
+user = os.environ.get('user')
+password = os.environ.get('password')
+host_product = os.environ.get('host_product')
+dbname = os.environ.get('dbname')
+port=os.environ.get('port')
 
 product_connection_string = "dbname={dbname} user={user} host={host} password={password} port={port}"\
                             .format(dbname=dbname,
@@ -252,3 +255,7 @@ def reco_page(request):
                     for chunk in file_obj.chunks():   
                         f.write(chunk)  #chunk      
     return render(request, 'mainapp/reco.html')
+
+def thnk(request):
+    if request.method == "POST":
+        return render(request, 'mainapp/review/thankyou.html')

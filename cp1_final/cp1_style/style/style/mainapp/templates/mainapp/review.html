@@ -131,34 +131,38 @@
       }
     </style>
 
-<input type="checkbox" id="check" />
-<label for="check">
-  <i class="fas fa-bars" id="btn"></i>
-  <i class="fas fa-times" id="cancel"></i>
-</label>
-<div class="sidebar">
-  <header>My Menu</header>
-  <a href="/info">
-    <i class="fas fa-info"></i>
-    <span>Information</span>
-  </a>
-  <a href="https://datastudio.google.com/reporting/4660765a-6533-4e5b-9960-fe0ad0c9370f" target = "_blank" class="fas fa-stream">
-    <i class="fas fa-qrcode"></i>
-    <span>Dashboard</span>
-  </a>
-  <a href="/cody">
-    <i class="fas fa-thumbs-up"></i>
-    <span>Recommend</span>
-  </a>
-  <a href="/reco">
-    <i class="fas fa-tshirt"></i>
-    <span>What is that?</span>
-  </a>
-  <a href="/review">
-    <i class="fas fa-pen"></i>
-    <span>Review</span>
-  </a>
-</div>
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>My Menu</header>
+      <a href="/info">
+        <i class="fas fa-info"></i>
+        <span>Information</span>
+      </a>
+      <a
+        href="https://datastudio.google.com/reporting/4660765a-6533-4e5b-9960-fe0ad0c9370f"
+        target="_blank"
+        class="fas fa-stream"
+      >
+        <i class="fas fa-qrcode"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="/cody">
+        <i class="fas fa-thumbs-up"></i>
+        <span>Recommend</span>
+      </a>
+      <a href="/reco">
+        <i class="fas fa-tshirt"></i>
+        <span>What is that?</span>
+      </a>
+      <a href="/review">
+        <i class="fas fa-pen"></i>
+        <span>Review</span>
+      </a>
+    </div>
     {% include 'header.html' %}
 
     <div>
@@ -198,7 +202,7 @@
         })
       </script>
       <form
-        action="/review/"
+        action="/review/thankyou"
         method="post"
         style="
           background-color: #f6f7f8;
