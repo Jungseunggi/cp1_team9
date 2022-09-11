@@ -5,9 +5,6 @@ import joblib
 import requests
 from bs4 import BeautifulSoup as bs
 import torch
-from dotenv import load_dotenv
-
-load_dotenv()
 
 def change(li):
     result = []
@@ -126,11 +123,11 @@ def size_to(size):
 model = joblib.load('mainapp/knn_one.pkl')
 
 #아래 정보를 입력
-user = os.environ.get('user')
-password = os.environ.get('password')
-host_product = os.environ.get('host_product')
-dbname = os.environ.get('dbname')
-port=os.environ.get('port')
+user = 'fuusaujh'
+password = 'KPbDgG1NtOXKVcU_rstsh0xMTFDChg0J'
+host_product = 'jelani.db.elephantsql.com'
+dbname = '	fuusaujh'
+port='5432'
 
 product_connection_string = "dbname={dbname} user={user} host={host} password={password} port={port}"\
                             .format(dbname=dbname,
